@@ -187,7 +187,7 @@ class CM19aDevice(threading.Thread):
 
     SEND_TIMEOUT = 1000             # 1000 ms = 1s
     RECEIVE_TIMEOUT = 100           # 100 ms
-    PROTOCOL_FILE = "/home/petrum/Daedalus/Daedalus/AutomationService/CM19aProtocol.ini"
+    PROTOCOL_FILE = "./CM19aProtocol.ini"
 
     def __init__(self, refresh=1, loginstance=None, polling=False):
         # Initialise the object and create the device driver
