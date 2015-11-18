@@ -66,8 +66,12 @@ It is better to set permissions via udev
     sudo nano /etc/udev/rules.d/cm19a.rules
         Note that I did not number this file so it runs after all other permissions are set.
 2. Add in the following text and save
-    # Allow all users to read and write to the CM19a X10 Transceiver (USB)
-    SYSFS{idVendor}=="0bc7", SYSFS{idProduct}=="0002", MODE="666"
+
+$> cat /etc/udev/rules.d/70-cm19a.rules 
+# Allow all users to read and write to the CM19a X10 Transceiver (USB)
+#SYSFS{idVendor}=="0bc7", SYSFS{idProduct}=="0002", MODE="666"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0002", MODE="666"
+
 3. If your CM19a is plugged in, then remove, wait a sec or two and then plug it back in again. The correct permissions should now be set.
 4. Any user should now be able to run the driver without using sudo.
     eg. From a terminal: ./CM19aDriver.py
