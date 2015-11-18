@@ -72,6 +72,9 @@ $> cat /etc/udev/rules.d/70-cm19a.rules
 #SYSFS{idVendor}=="0bc7", SYSFS{idProduct}=="0002", MODE="666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0002", MODE="666"
 
+$> ls -l /dev/bus/usb/001/018
+crw-rw-rw- 1 root root 189, 17 Nov 17 23:03 /dev/bus/usb/001/018
+
 3. If your CM19a is plugged in, then remove, wait a sec or two and then plug it back in again. The correct permissions should now be set.
 4. Any user should now be able to run the driver without using sudo.
     eg. From a terminal: ./CM19aDriver.py
