@@ -95,7 +95,7 @@ MODE = 'Command Line'              # Mode of operation: either 'Command Line', '
 #MODE = 'HTTP Server'
 
 # Required only if MODE == 'HTTP Server'
-SERVER_IP_ADDRESS = '192.168.1.3'              # Set SERVERIP to the IP address of the server
+SERVER_IP_ADDRESS = '192.168.1.5'              # Set SERVERIP to the IP address of the server
 SERVER_PORT = 8008                             # Consider firewall rules if any
 
 # Required only for HTTP Server and importing into another script
